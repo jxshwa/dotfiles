@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
+local builtin = require('telescope.builtin')
 
 map("i", "jk", "<Esc>")
 map("i", "kj", "<Esc>")
@@ -25,3 +26,8 @@ map("n", "n", "nzz", { desc = "Centered next search result"})
 map("n", "N", "Nzz", { desc = "Centered prev search result"})
 map("n", "<C-d>", "<C-d>zz", { desc = "Center half page down"})
 map("n", "<C-u>", "<C-u>zz", { desc = "Center half page up"})
+
+map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+map('n', '<leader>bb', builtin.buffers, { desc = 'Telescope buffers' })
+map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
