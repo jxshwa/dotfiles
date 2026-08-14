@@ -1,0 +1,73 @@
+[
+  {
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+      "k j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
+      "space e": "project_panel::ToggleFocus",
+      "space f f": "file_finder::Toggle",
+      "space g g": "workspace::ToggleLeftDock",
+      "space t": "workspace::ToggleBottomDock",
+      "space T": "workspace::NewTerminal",
+      "space b b": "tab_switcher::OpenInActivePane",
+      "space b d": "pane::CloseActiveItem",
+      "space s s": "outline::Toggle",
+      "space r n": "editor::Rename"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "enter": "project_panel::Open",
+      "space": "project_panel::Open",
+      "right": "project_panel::ExpandSelectedEntry",
+      "left": "project_panel::CollapseSelectedEntry"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "r": "project_panel::Rename",
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "c": "project_panel::Copy",
+      "s": "project_panel::OpenSplitVertical"
+    }
+  },
+
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-e": "project_panel::Toggle"
+    }
+  }
+]
