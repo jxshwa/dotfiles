@@ -6,3 +6,4 @@ Personal development environment configs.
 
 - VSCode
 - Zed
+- nvim
